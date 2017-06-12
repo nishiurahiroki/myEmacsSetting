@@ -1,0 +1,4 @@
+# myEmacsSetting
+
+## set
+./set.sh
