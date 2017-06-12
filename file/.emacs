@@ -28,3 +28,7 @@
                (throw 'end-flag t)))))))
 
 (global-set-key "\C-c\C-r" 'window-resizer)
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
+(setq web-mode-php-offset 4)
