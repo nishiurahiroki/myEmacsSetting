@@ -29,6 +29,24 @@
 
 (global-set-key "\C-c\C-r" 'window-resizer)
 
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
-(setq web-mode-php-offset 4)
+;; タブにスペースを使用する
+(setq-default tab-width 2 indent-tabs-mode nil)
+
+;; 行数表示
+(global-linum-mode t)
+
+;; 日本語設定
+(set-locale-environment nil)
+(set-language-environment "Japanese")
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; バックアップファイルを作成させない
+(setq make-backup-files nil)
+
+;; 終了時にオートセーブファイルを削除する
+(setq delete-auto-save-files t)
